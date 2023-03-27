@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #FFF !important;
+  
+}
+.navbar-collapse{
+    justify-content: space-evenly !important;
+}
+.nav-link{
+    font-size: 16px !important;
+}
+.brand-logo{
+    max-width: 200px !important;
+}

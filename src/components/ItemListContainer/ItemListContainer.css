@@ -1,0 +1,8 @@
+.ItemListContainer{
+    border: 2px solid black !important;
+    height: min-content  !important;
+}
+
+.cover-img{
+    border-radius: 40px;
+}
