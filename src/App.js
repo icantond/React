@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <ItemListContainer greeting="Bienvenidos a la tienda online de eLiving"/>
     </div>
+
   );
 }
 export default App;
