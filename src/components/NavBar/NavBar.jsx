@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#"><img src={Logo} alt="logo de eLiving" className='brand-logo'/></a>
+                <a className="navbar-brand" href="#"><img src={Logo} alt="logo" className='brand-logo'/><br/>Records</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,34 +15,33 @@ const NavBar = () => {
                     <ul className="navbar-nav">
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Living
+                                Rock
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Sofás</a></li>
-                                <li><a className="dropdown-item" href="#">Sillones</a></li>
-                                <li><a className="dropdown-item" href="#">Mesas</a></li>
+                                <li><a className="dropdown-item" href="#">Rock Nacional</a></li>
+                                <li><a className="dropdown-item" href="#">Rock Internacional</a></li>
                             </ul>
                         </li>
 
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Comedor
+                                Pop
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Sillas</a></li>
-                                <li><a className="dropdown-item" href="#">Mesas</a></li>
-                                <li><a className="dropdown-item" href="#">Baiuts</a></li>
+                                <li><a className="dropdown-item" href="#">Nacional</a></li>
+                                <li><a className="dropdown-item" href="#">Internacional</a></li>
+                                <li><a className="dropdown-item" href="#">Latino</a></li>
                             </ul>
                         </li>
 
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dormitorio
+                                Otros
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Respaldos</a></li>
-                                <li><a className="dropdown-item" href="#">Mesas de Luz</a></li>
-                                <li><a className="dropdown-item" href="#">Guardado</a></li>
+                                <li><a className="dropdown-item" href="#">R&B</a></li>
+                                <li><a className="dropdown-item" href="#">Brit Rock</a></li>
+                                <li><a className="dropdown-item" href="#">Electrónica</a></li>
                             </ul>
                         </li>
                     </ul>

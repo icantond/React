@@ -1,0 +1,16 @@
+/* .card-image {
+    width: 90%;
+    margin: auto;
+} */
+
+.card {
+    background-color: #3f7eca00;
+    border-style: none;
+    border-radius: 15px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
+    -webkit-box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
+    -moz-box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
+}

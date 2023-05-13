@@ -1,24 +1,37 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../ItemListContainer/ItemListContainer.css";
-import cover from "../ItemListContainer/cover.jpg";
-import ItemCount from '../ItemCount/ItemCount';
+import { getProducts, getProductsByCategory } from '../../asyncMock';
+import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
+const ItemListContainer = () => {
 
-const ItemListContainer = (props) => {
+    const [products, setProducts] = useState([])
+
+    const category = useParams().category;
+
+    const [title, setTitle] = useState("Productos")
+
+    useEffect(() => {
+        getProducts()
+        .then((response) => {
+            if (category){
+                setProducts(response.filter((prod) => prod.category === category));
+                setTitle(category);
+            } else{
+                setProducts(response);
+                setTitle("Productos");
+            }
+        })
+    }, [category])
 
     return (
-
-        <>
-            <div className='ItemListContainer container-fluid'>
-                <div className='row'>
-                    <h2 className='ItemListContainer-title'>{props.greeting}</h2>
-                    <img src={cover} alt="imagen de sala de estar con colores neutros" className="cover-img" />
-                </div>
-            </div>
-            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log("Cantidad agregada: ", quantity)} />
-        </>
+        <div className='ItemListContainer container'>
+            <ItemList products={products} title={title} />
+        </div>
     )
 };
+
 export default ItemListContainer;
 
 

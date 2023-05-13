@@ -16,21 +16,14 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
     };
 
-    // const handleClick = () => {
-    //     if (count <= stock) {
-    //         onAdd(count);
-    //         setCount(1);
-    //     }
-    // };
-
     return (
-        <div className='item-counter'>
+        <div className='item-counter container'>
             <div className='counter-controls'>
-                <button className="btn btn-outline-secondary" onClick={decrementCount}>-</button>
+                <button className="btn btn-outline-danger" onClick={decrementCount}>-</button>
                 <span className='counter-number'>{quantity}</span>
-                <button className="btn btn-outline-secondary" onClick={addCount}>+</button>
+                <button className="btn btn-outline-danger" onClick={addCount}>+</button>
             </div>
-            <button className="btn btn-outline-secondary" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al Carrito</button>
+            <button className="btn btn-outline-danger" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al Carrito</button>
         </div>
     );
 };

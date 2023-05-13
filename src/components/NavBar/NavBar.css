@@ -1,6 +1,9 @@
 .navbar {
-    background-color: #FFF !important;
-  
+    background-color: #F93B4C !important;
+    position: sticky;
+    width: 100%;
+    top: 0px;
+    z-index: 2;
 }
 .navbar-collapse{
     justify-content: space-evenly !important;
