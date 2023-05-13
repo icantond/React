@@ -45,13 +45,13 @@
     },
     {
         "id": 1005,
-        "titulo": "MTV Unplugged: Confort y Música Para Volar - LP Doble",
+        "titulo": "MTV Unplugged Confort y Música Para Volar",
         "artista": "Soda Stereo",
         "category": "Rock Nacional",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_870351-MLA44708839705_012021-F.webp",
         "anio": 1996,
         "precio": 20500,
-        "tracklist": "1 UN MISIL EN MI PLACARD - 2 EN LA CIUDAD DE LA FURIA - 3 ENTRE CANIBALES - 4 PASAS - 5 ZOOM - 6 CUANDO PASE EL TEMBLOR - 7 TE PARA TRES - 8 ANGEL ELECTRICO - 9 TERAPIA DE AMOR INTENSIVA - 10 DISCO ETERNO - 11 ELLA USO MI CABEZA COMO UN REVOLVER - 12 PASEANDO POR ROMA - 13 GENESIS",
+        "tracklist": " LP DOBLE: 1 UN MISIL EN MI PLACARD - 2 EN LA CIUDAD DE LA FURIA - 3 ENTRE CANIBALES - 4 PASAS - 5 ZOOM - 6 CUANDO PASE EL TEMBLOR - 7 TE PARA TRES - 8 ANGEL ELECTRICO - 9 TERAPIA DE AMOR INTENSIVA - 10 DISCO ETERNO - 11 ELLA USO MI CABEZA COMO UN REVOLVER - 12 PASEANDO POR ROMA - 13 GENESIS",
         "stock": 6
     },
     {
@@ -70,9 +70,9 @@
         "titulo": "Morrison Hotel",
         "artista": "The Doors",
         "category": "Rock Internacional",
-        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/168/674/products/5802e62b-776b-45b9-82eb-97d52395c9c71-ad018a888ecacce61116813270926348-1024-1024.webp",
-        "anio": 1967,
-        "precio": 17800,
+        "imagen": "https://cdn.shopify.com/s/files/1/1474/5258/products/morrisonhotel_1200x_e618c1ee-b169-42f2-97cd-802f2e95945f_522x522.jpg?v=1680139761",
+        "anio": 1970,
+        "precio": 19600,
         "tracklist": "SIDE 1-HARD ROCK CAFE: 1-ROADHOUSE BLUES - 2-WAITING FOR THE SUN - 3-YOU MAKE ME REAL - 4-PEACE FROG - 5-BLUE SUNDAY - 6-SHIP OF FOOLS // SIDE 2-MORRISON HOTEL: 7-LAND HO! - 8-THE SPY - 9-QUEEN OF THE HIGHWAY - 10-INDIAN SUMMER - 11-MAGGIE M'GILL"
         ,
         "stock": 6
@@ -137,7 +137,7 @@
         "id": 1013,
         "titulo": "High Voltage",
         "artista": "AC/DC",
-        "category": "Rock Internacional",
+        "category": "Rock",
         "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_935506-MLA47876035020_102021-F.webp",
         "anio": 1975,
         "precio": 15400,
@@ -146,14 +146,14 @@
     },
     {
         "id": 1014,
-        "titulo": "High Voltage",
-        "artista": "AC/DC",
-        "category": "Rock Internacional",
-        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_935506-MLA47876035020_102021-F.webp",
-        "anio": 1975,
-        "precio": 15400,
-        "tracklist": "1-IT'S A LONG WAY TO THE TOP (IF YOU WANNA ROCK 'N' ROLL)-ROCK 'N' ROLL SINGER-THE JACK-LIVE WIRE-T.N.T-CAN I SIT NEXT TO YOUR GIRL-LITTLE LOVER-SHE'S GOT BALLS-HIGH VOLTAGE",
-        "stock": 6
+        "titulo": "Fuerte",
+        "artista": "Miranda!",
+        "category": "Pop Nacional",
+        "imagen": "https://plazamusica.com.ar/wp-content/uploads/2021/06/60bc2e54039c4_image_name-1.jpg",
+        "anio": 2017,
+        "precio": 10200,
+        "tracklist": "1 743 - 2 Cálido y Rojo - 3 Lejos de Mi Alcance - 4 No - 5 Ahora Que Soy Cantante - 6 Amante Amigo - 7 Enero (con Jesus Navarro) - 8 En Esta Noche - 9 Tu Hombre (con Natalia Oreiro) - 10 Tu Padre - 11 Quiero Vivir a Tu Lado - 12 - Mala Señal",
+        "stock": 3
     },
     {
         "id": 1015,

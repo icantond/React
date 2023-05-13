@@ -13,7 +13,7 @@ const ItemDetail = ({product}) => {
                 </div>
                 <p>Año: {product.anio}</p>
                 <p>Precio: ${product.precio}</p>
-                <p>Lista de canciones: {product.tracklist}</p>
+                <p><strong>Lista de canciones: </strong><br/> {product.tracklist}</p>
                 <ItemCount initial={1} stock={product.stock} onAdd={(quantity) => console.log("Cantidad agregada ", quantity)}/>
                 <p> Código:{product.id}</p>
             </article>

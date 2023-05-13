@@ -1,7 +1,4 @@
-/* .card-image {
-    width: 90%;
-    margin: auto;
-} */
+
 
 .card {
     background-color: #3f7eca00;
@@ -13,4 +10,22 @@
     box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
     -webkit-box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
     -moz-box-shadow: 13px 11px 22px -3px rgba(86, 86, 44, 0.75);
+
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.card-subtitle{
+    font-size: 16px;
+}
+
+.card-price{
+    font-size: 18px;
+    font-weight: bolder;
 }
