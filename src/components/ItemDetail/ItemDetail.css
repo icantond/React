@@ -1,0 +1,20 @@
+.item-detail-img{
+    width: 500px;
+}
+
+.product-title{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.product-subtitle{
+    font-size: 26px;
+}
+
+.product-year{
+    font-size: 20px;
+}
+
+.product-price{
+    font-size: 28px;
+}
