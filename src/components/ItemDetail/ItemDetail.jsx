@@ -1,25 +1,46 @@
-import ItemCount from "../ItemCount/ItemCount"
-import "./ItemDetail.css"
+import { useContext, useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
+import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
-const ItemDetail = ({product}) => {
+
+const ItemDetail = ({ product }) => {
+    const [quantityAdded, setQuantityAdded] = useState(0)
+
+    const{ addItem } = useContext(CartContext)
+
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
+
+        const item = {
+            product
+        }
+
+        addItem(item, quantity)
+    }
 
     return (
-
         <div className="container-fluid">
             <article className="row">
                 <h2 className="product-title">{product.titulo}</h2>
                 <h2 className="product-subtitle">{product.artista}</h2>
                 <div className="item-detail-img-container">
-                    <img className="item-detail-img" src={product.imagen} alt={product.titulo}/>
+                    <img className="item-detail-img" src={product.imagen} alt={product.titulo} />
                 </div>
                 <p className="product-year">Año: {product.anio}</p>
                 <p className="product-price">Precio: <strong>${product.precio}</strong></p>
-                <p className="product-description"><strong>Lista de canciones: </strong><br/> {product.tracklist}</p>
-                <ItemCount initial={1} stock={product.stock} onAdd={(quantity) => console.log("Cantidad agregada ", quantity)}/>
+                <p className="product-description"><strong>Lista de canciones: </strong><br /> {product.tracklist}</p>
                 <p className="product-id"> Código:{product.id}</p>
             </article>
+            {
+                quantityAdded > 0 ? (
+                    <Link to="/cart" className="btn btn-primary">Finalizar compra</Link>)
+                    :
+                    (<ItemCount initial={1} stock={product.stock} onAdd={(handleOnAdd)} />)
+            }
         </div>
     )
 }
 
-export default ItemDetail
+export default ItemDetail;
