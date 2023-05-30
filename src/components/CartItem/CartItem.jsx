@@ -1,4 +1,5 @@
 import React from 'react'
+import './CartItem.css'
 
 // const CartItem = ( {id, artista, titulo, precio, quantity, imagen} ) => {
 // const CartItem = (product) => {
@@ -7,15 +8,17 @@ import React from 'react'
 //NO LOGRO QUE SE RENDERICEN LOS PRODUCTOS EN CART DESESTRUCTURANDO "product", POR ESO TENGO QUE UTILIZAR "propiedad"
 const CartItem = ({ id, artista, titulo, precio, quantity, imagen }) => {
     return (
-        <div key={id}>
-            <h2>{titulo}</h2>
-            <h3>{artista}</h3>
-            <p>Cantidad: {quantity}</p>
-            <p>Precio: ${precio}</p>
-            <p>Subtotal: ${precio * quantity} </p>
-            <img src={imagen} alt={titulo} />
-
-        </div>
+        <tr key={id}>
+                <td className='d-flex justify-content-between p-5'>
+                <h5 className='cartitem-title'>{titulo}</h5>
+                <p className='cart-item-artist'>{artista}</p>
+                <img src={imagen} alt={titulo} className='cartitem-img'/>
+                </td>
+                <td><p className='cartitem-qty'>{quantity}</p></td>
+                <td><p className='cartitem-price'>${precio}</p></td>
+                <td><p className='cartitem-subtotal'>${precio * quantity} </p></td>
+        </tr>
+        
     )
 }
 
