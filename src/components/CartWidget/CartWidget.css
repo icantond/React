@@ -1,3 +1,13 @@
 .cartwidget-container{
-    margin-right: 25px;
+    margin-right: 25px !important;
+    border-color: #Fff;
+}
+
+.carwidget-counter{
+    background-color: blue;
+    border-radius: 100%;
+}
+
+.cartwidget-counter-number{
+    text-decoration: none !important;
 }
