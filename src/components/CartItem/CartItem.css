@@ -1,11 +1,12 @@
-.cartitem-img{
-   max-width: 100px;
+.cartitem-img {
+    max-width: 100px;
 }
 
-.cartitem-title{
+.cartitem-title {
     font-size: 1.2rem;
     font-weight: bold;
 }
-.cartitem-artist{
+
+.cartitem-artist {
     font-size: 1rem;
 }

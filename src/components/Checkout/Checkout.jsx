@@ -1,13 +1,19 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { db } from "../../services/firebase/firebaseConfig";
-import { collection } from 'firebase/firestore';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
-import {CartContext} from "../context/CartContext"
+import {CartContext} from "../context/CartContext" 
+import { getDocs, collection, query, where, addDoc, writeBatch, documentId } from "firebase/firestore";
+import { Timestamp } from "firebase/firestore";
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState("");
-    const [cart, total, clearCart] = useContext(CartContext);
+    // const { cart, total, clearCart} = useContext(CartContext);
+    const { cart, calculateTotal, clearCart } = useContext(CartContext);
+    const [total, setTotal] = useState(0);
+    useEffect(() => {
+        setTotal(calculateTotal());
+    }, [cart, calculateTotal]);
 
     const createOrder = async ({ name, phone, email, address }) => {
         setLoading(true)
@@ -18,15 +24,15 @@ const Checkout = () => {
                     name, phone, email, address
                 },
                 items: cart,
-                total: total,
-                date: TimeStamp.fromDate(new Date())
+                total: parseInt(total),
+                date: Timestamp.fromDate(new Date())
             }
             const batch = writeBatch(db)
             const outOfStock = []
-            const ids = cart.map(prod => prod.id)
+            const ids = cart.map(item => item.id)
             const productsRef = collection(db, "products")
-            const producsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), "in", ids)))
-            const { docs } = producsAddedFromFirestore
+            const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), "in", ids)));
+            const { docs } = productsAddedFromFirestore
             docs.forEach(doc => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stock
@@ -58,12 +64,14 @@ const Checkout = () => {
         }
     }
 
-    if(loading){
-        return <h3>Tu pedido está siendo procesado</h3>
+    if(loading) {
+        return <h3>Tu pedido está siendo procesado</h3>;
     }
     if(orderId){
         return <h3>Tu pedido se ha registrado con el número de órden {orderId} </h3>
     }
+
+    console.log(createOrder)
     return (
         <div>
             <h2>Checkout</h2>
@@ -74,3 +82,4 @@ const Checkout = () => {
 }
 
 export default Checkout;
+
