@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { db } from "../../services/firebase/firebaseConfig";
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import {CartContext} from "../context/CartContext" 
@@ -8,12 +8,7 @@ import { Timestamp } from "firebase/firestore";
 const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState("");
-    // const { cart, total, clearCart} = useContext(CartContext);
-    const { cart, calculateTotal, clearCart } = useContext(CartContext);
-    const [total, setTotal] = useState(0);
-    useEffect(() => {
-        setTotal(calculateTotal());
-    }, [cart, calculateTotal]);
+    const { cart, getTotalPrice, clearCart} = useContext(CartContext);
 
     const createOrder = async ({ name, phone, email, address }) => {
         setLoading(true)
@@ -24,7 +19,7 @@ const Checkout = () => {
                     name, phone, email, address
                 },
                 items: cart,
-                total: parseInt(total),
+                total: getTotalPrice(),
                 date: Timestamp.fromDate(new Date())
             }
             const batch = writeBatch(db)
