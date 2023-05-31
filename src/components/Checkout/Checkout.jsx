@@ -4,16 +4,34 @@ import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import {CartContext} from "../context/CartContext" 
 import { getDocs, collection, query, where, addDoc, writeBatch, documentId } from "firebase/firestore";
 import { Timestamp } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState("");
     const { cart, getTotalPrice, clearCart} = useContext(CartContext);
-
+    const validateEmail = async (email) =>{
+        try{
+            const { user } = await createUserWithEmailAndPassword(auth, email, "password");
+            await user.delete();
+            return true;
+        } catch (error){
+            return false;
+        }
+    };
     const createOrder = async ({ name, phone, email, address }) => {
         setLoading(true)
 
         try {
+            const validEmail = await validateEmail(email);
+            if (!validEmail) {
+                console.error("La dirección de correo electrónico proporcionada no es válida")
+            }
+
+
+            
             const objOrder = {
                 buyer: {
                     name, phone, email, address
