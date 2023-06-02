@@ -1,11 +1,6 @@
 import React from 'react'
 import './CartItem.css'
 
-// const CartItem = ( {id, artista, titulo, precio, quantity, imagen} ) => {
-// const CartItem = (product) => {
-// const { id, artista, titulo, precio, quantity, imagen } = product;
-// const { id, titulo, artista, quantity, precio, imagen } = product;
-//NO LOGRO QUE SE RENDERICEN LOS PRODUCTOS EN CART DESESTRUCTURANDO "product", POR ESO TENGO QUE UTILIZAR "propiedad"
 const CartItem = ({ id, artista, titulo, precio, quantity, imagen }) => {
     return (
         <tr key={id}>

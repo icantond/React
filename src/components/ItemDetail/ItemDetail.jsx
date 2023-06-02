@@ -31,7 +31,8 @@ const ItemDetail = ({ product }) => {
                 <p className="product-year">Año: {product.anio}</p>
                 <p className="product-price">Precio: <strong>${product.precio}</strong></p>
                 <p className="product-description"><strong>Lista de canciones: </strong><br /> {product.tracklist}</p>
-                <p className="product-id"> Código:{product.id}</p>
+                <p className="product-id"> Código: {product.id}</p>
+                <p className="product-stock">Stock: {product.stock}</p>
             </article>
             {
                 quantityAdded > 0 ? (

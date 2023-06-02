@@ -1,4 +1,6 @@
 .ItemListContainer{
-    border: 1px solid #0000004f !important;
-    height: min-content  !important;
+    padding: 35px;
+}
+.spinner-grow{
+    margin: auto !important;
 }

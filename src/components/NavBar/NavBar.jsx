@@ -9,7 +9,7 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <Link to='/' className="navbar-brand"><img src={Logo} alt="logo" className='brand-logo'/><br/>Records</Link>
+                <Link to='/' className="navbar-brand"><img src={Logo} alt="logo" className='brand-logo'/><br/><span className='brand-subtitle'>RECORDS</span></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

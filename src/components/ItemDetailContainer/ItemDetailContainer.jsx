@@ -1,20 +1,16 @@
 import { useState, useEffect } from 'react'
-// import { getProductById } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 
 
-// const ItemDetailContainer = ({ productId }) => {
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const { productId } = useParams()
-    // const id = useParams().productId;
 
     useEffect(() => {
         setLoading(true)
@@ -33,10 +29,6 @@ const ItemDetailContainer = () => {
             .finally(() =>{
                 setLoading(false)
             })
-            // getProductById(Number(id))
-            //     .then(response => {
-            //         setProduct(response)
-            //     })
     }, [productId])
 
     return (

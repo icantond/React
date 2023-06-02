@@ -40,9 +40,9 @@ const Cart = () => {
                 </table>
                 <h3>Total: ${calculateTotal()} </h3>
                 {cart.length > 0
-                    ? <button onClick={() => clearCart()} className="btn btn btn-outline-warning">Vaciar carrito</button>
-                    : <button onClick={() => clearCart()} className="btn btn-outline-light" disabled>Vaciar carrito</button>}
-                <Link to="/checkout" className="btn btn-outline-success" >Completar la compra </Link>
+                    ? <button onClick={() => clearCart()} className="btn btn btn-outline-danger col-3 m-auto">Vaciar carrito</button>
+                    : <button onClick={() => clearCart()} className="btn btn-outline-light col-3 m-auto" disabled>Vaciar carrito</button>}
+                <Link to="/checkout" className="btn btn-outline-success col-3 m-auto" >Completar la compra </Link>
             </div>
         </div>
     )

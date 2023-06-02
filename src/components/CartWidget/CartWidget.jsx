@@ -8,16 +8,14 @@ const CartWidget = () => {
     const { totalQuantity } = useContext(CartContext);
 
     return (
-        // <div className='cartwidget-container'>
-        //     <i className="bi bi-cart"></i>
-        //     {itemCount > 0 && <span className="cart-count">{itemCount}</span>}
-        // </div>
+ 
         <Link to="/cart">
             <div className='cartwidget-container d-flex'>
                 <i className='bi bi-cart'></i>
                 {totalQuantity > 0 &&
                     <div className='cartwidget-counter'>
-                        <span className='cartwidget-counter-number'>{totalQuantity}</span>
+                    <i className={`bi bi-${totalQuantity}-circle-fill`}></i>
+                        {/* <span className='cartwidget-counter-number'>{totalQuantity}</span> */}
                     </div>
                 } 
             </div>

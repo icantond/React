@@ -84,7 +84,6 @@ const Checkout = () => {
         return <h3>Tu pedido se ha registrado con el número de órden {orderId} </h3>
     }
 
-    console.log(createOrder)
     return (
         <div>
             <h2>Checkout</h2>
