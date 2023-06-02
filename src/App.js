@@ -6,6 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider} from './components/context/CartContext';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
+          <ToastContainer />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />

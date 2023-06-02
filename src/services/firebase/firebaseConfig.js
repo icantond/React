@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
 
-    apiKey: "AIzaSyAXmtIhjwJtoSAEYA0kj4TOhJBiZfRq7AE",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
     authDomain: "react-canton-debat.firebaseapp.com",
 
@@ -15,7 +15,7 @@ const firebaseConfig = {
 
     messagingSenderId: "299145369104",
 
-    appId: "1:299145369104:web:b4dee7fec048b12a061c95"
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
 
 };
 
