@@ -17,7 +17,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     };
 
     return (
-        <div className='item-counter'>
+        <div className='item-counter d-flex'>
             <div className='counter-controls m-2'>
                 <button className="btn btn-outline-danger" onClick={decrementCount}>-</button>
                 <span className='counter-number'>{quantity}</span>
