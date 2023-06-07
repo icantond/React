@@ -1,7 +1,9 @@
 a{
     text-decoration: none !important;
 }
-
+.cartwidget-icon{
+    width: 30px;
+}
 .cartwidget-container{
     margin-right: 25px !important;
     border-radius: 15%;
@@ -25,4 +27,12 @@ a{
 } */
 .bi{
     color: #F93B4C;
+}
+@media (max-width: 991px){
+    .cartwidget-container{
+        position: relative;
+        left: 50vw;
+        top: -70px;
+        margin:auto !important;
+    }
 }

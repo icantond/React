@@ -37,8 +37,16 @@
     font-family: 'Ubuntu', sans-serif;
     color: #000;
     font-weight: 600;
-    padding: 8px;
+    background-color: #f1c40f !important;
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+
 }
 .ActiveOption:hover{
     cursor: default;
+}
+
+.active{
+    background-color: #f1c40f !important;
+    /* color: #f93b4c, imp !important; ; */
 }

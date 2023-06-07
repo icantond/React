@@ -15,10 +15,10 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
-                        <NavLink to={'category/Rock Nacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Rock Nacional</NavLink>
-                        <NavLink to={'category/Rock Internacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Rock Internacional</NavLink>
-                        <NavLink to={'category/Pop Nacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Pop Nacional</NavLink>
-                        <NavLink to={'category/Pop Internacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Pop Internacional</NavLink>
+                        <li><NavLink to={'category/Rock Nacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Rock Nacional</NavLink></li>
+                        <li><NavLink to={'category/Rock Internacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Rock Internacional</NavLink></li>
+                        <li><NavLink to={'category/Pop Nacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Pop Nacional</NavLink></li>
+                        <li><NavLink to={'category/Pop Internacional'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option nav-link'}>Pop Internacional</NavLink></li>
                     </ul>
                 </div>
             </div>

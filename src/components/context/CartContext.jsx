@@ -40,26 +40,32 @@ export const CartProvider = ({ children }) => {
         const MySwal = withReactContent(Swal)
 
         MySwal.fire({
-            title: <p>Vaciando el carrito</p>,
-            didOpen: () => {
-                // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-                MySwal.showLoading()
-            },
-        }).then(() => {
-            return MySwal.fire(<p>Carrito vaciado!</p>)
+            title: 'Estás segur@ que deseas vaciar el carrito?',
+            text: "Esta acción no se puede revertir",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, vaciarlo!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                MySwal.fire(
+                    'Listo!',
+                    'El carrito se vació con éxito.'
+                )
+            }
         })
     };
+        const isInCart = (productId) => {
+            return cart.some(prod => prod.id === productId)
+        }
 
-    const isInCart = (productId) => {
-        return cart.some(prod => prod.id === productId)
+
+        return (
+            <CartContext.Provider value={{ cart, addItem, removeItem, getTotalPrice, clearCart, totalQuantity }}>
+                {children}
+            </CartContext.Provider>
+        );
     }
 
-
-    return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, getTotalPrice, clearCart, totalQuantity }}>
-            {children}
-        </CartContext.Provider>
-    );
-}
-
-export default CartContext;
+    export default CartContext;

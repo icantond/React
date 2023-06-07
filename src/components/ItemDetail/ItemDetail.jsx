@@ -34,7 +34,7 @@ const ItemDetail = ({ product }) => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid item-detail-container">
             <article className="row">
                 <h2 className="product-title">{product.titulo}</h2>
                 <h2 className="product-subtitle">{product.artista}</h2>

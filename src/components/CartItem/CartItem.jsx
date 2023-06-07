@@ -3,7 +3,7 @@ import './CartItem.css'
 
 const CartItem = ({ id, artista, titulo, precio, quantity, imagen }) => {
     return (
-        <tr key={id}>
+        <tr key={id} className='cartItem-table'>
                 <td className='d-flex justify-content-between p-5'>
                 <h5 className='cartitem-title'>{titulo}</h5>
                 <p className='cart-item-artist'>{artista}</p>

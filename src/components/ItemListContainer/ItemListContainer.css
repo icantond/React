@@ -1,5 +1,7 @@
 .ItemListContainer{
-    padding: 35px;
+    /* padding: 35px; */
+    padding-bottom: 15rem;
+    padding-top: 2rem;
 }
 .spinner-grow{
     margin: auto !important;
