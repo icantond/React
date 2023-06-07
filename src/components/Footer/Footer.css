@@ -4,6 +4,8 @@
 .footer-container{
     background-color: #F93B4C !important;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
+
+
