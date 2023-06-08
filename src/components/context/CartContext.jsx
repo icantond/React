@@ -13,7 +13,7 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [totalQuantity, setTotalQuantity] = useState(0);
-    // console.log(cart)
+    
 
     const addItem = (item, quantity) => {
         if (!isInCart(item.product.id)) {
@@ -40,20 +40,7 @@ export const CartProvider = ({ children }) => {
         const MySwal = withReactContent(Swal)
 
         MySwal.fire({
-            title: 'Estás segur@ que deseas vaciar el carrito?',
-            text: "Esta acción no se puede revertir",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, vaciarlo!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                MySwal.fire(
-                    'Listo!',
-                    'El carrito se vació con éxito.'
-                )
-            }
+            title: 'Carrito vacío!',
         })
     };
         const isInCart = (productId) => {

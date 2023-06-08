@@ -36,7 +36,6 @@ const Cart = () => {
                     </thead>
                     <tbody>
                         {cart.map(prod => <CartItem key={prod} product={prod} {...prod} />)}
-                        {/* {cart.map(prod => <CartItem key={prod.id} product={prod} />)} */}
                     </tbody>
                 </table>
                 <h3>Total: ${calculateTotal()} </h3>

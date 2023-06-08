@@ -1,37 +1,20 @@
 import React, { useContext, useState } from 'react';
 import { db } from "../../services/firebase/firebaseConfig";
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
-import {CartContext} from "../context/CartContext" 
+import { CartContext } from "../context/CartContext"
 import { getDocs, collection, query, where, addDoc, writeBatch, documentId } from "firebase/firestore";
 import { Timestamp } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth();
+import './Checkout.css';
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState("");
-    const { cart, getTotalPrice, clearCart} = useContext(CartContext);
-    const validateEmail = async (email) =>{
-        try{
-            const { user } = await createUserWithEmailAndPassword(auth, email, "password");
-            await user.delete();
-            return true;
-        } catch (error){
-            return false;
-        }
-    };
+    const { cart, getTotalPrice, clearCart } = useContext(CartContext);
+
     const createOrder = async ({ name, phone, email, address }) => {
         setLoading(true)
 
         try {
-            const validEmail = await validateEmail(email);
-            if (!validEmail) {
-                console.error("La dirección de correo electrónico proporcionada no es válida")
-            }
-
-
-            
             const objOrder = {
                 buyer: {
                     name, phone, email, address
@@ -77,18 +60,20 @@ const Checkout = () => {
         }
     }
 
-    if(loading) {
-        return <h3>Tu pedido está siendo procesado</h3>;
+    if (loading) {
+        return <h3 className='section-title'>Tu pedido está siendo procesado</h3>;
     }
-    if(orderId){
-        return <h3>Tu pedido se ha registrado con el número de órden {orderId} </h3>
+    if (orderId) {
+        return <h3 className='section-title'>Tu pedido se ha registrado con el número de órden {orderId} </h3>
     }
 
     return (
-        <div>
-            <h2>Checkout</h2>
-            <p>Ingresa tus datos para generar el pedido</p>
-            <CheckoutForm onConfirm={createOrder} />
+        <div className='container'>
+            <div className='checkoutform-container col-10 col-lg-8'>
+                <h2 className='section-title'>Checkout</h2>
+                <p className='section-subtitle'>Ingresa tus datos para generar el pedido</p>
+                <CheckoutForm onConfirm={createOrder} className="row"/>
+            </div>
         </div>
     )
 }
