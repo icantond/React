@@ -8,6 +8,7 @@ import { db } from '../../services/firebase/firebaseConfig'
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState(null);
+    // eslint-disable-next-line no-unused-vars
     const [loading, setLoading] = useState(true);
 
     const { productId } = useParams()
